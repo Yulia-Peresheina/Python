@@ -5,6 +5,9 @@
 # чем Петя и Сережа вместе?
 
 number_toys = int(input("Сколько журавликов сделали дети? "))
-katya = number_toys//6*4
-boys = number_toys//6 
-print(f"Катя сделала {katya}, а мальчики по {boys} каждый")
+if number_toys % 2 or (number_toys // 2) % 2:
+    print("Введено неверное значение!")
+else:
+    katya = number_toys // 6 * 4
+    boys = number_toys // 6
+    print(f"Катя сделала {katya}, а мальчики по {boys} каждый")
