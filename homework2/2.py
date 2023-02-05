@@ -4,11 +4,16 @@
 # Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их
 # произведение P. Помогите Кате отгадать задуманные Петей числа.
 
+from time import time
 sum = int(input("Сумма двух чисел: "))
 mult = int(input("Произведение двух чисел: "))
+
+start = time()
+
 for i in range (1,1001):
     num1 = i
     num2 = mult // num1
     if num1 + num2 == sum:
         print(f"Первое число {num1}, второе {num2}")
         break
+print(time()-start)
