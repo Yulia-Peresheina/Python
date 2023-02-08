@@ -5,9 +5,10 @@
 # В последующих строках записаны N целых чисел Ai.
 #  Последняя строка содержит число X
 
-list_size = int(input("Введите количество элементов: "))
-list_1 = [int(input(f"Введите {i+1} число: ")) for i in range(list_size)]
-num = int(input("Введите искомое число: "))
+# list_size = int(input("Введите количество элементов: "))
+# list_1 = [int(input(f"Введите {i+1} число: ")) for i in range(list_size)]
+# num = int(input("Введите искомое число: "))
+list_nums = [int(input()) for _ in range(int(input("количество: ")))]
+print(list_nums.count(int(input("искомое число: "))))
 
-
-print(f"Искомое число встречается {sum([1 for i in range(len(list_1)) if num == list_1[i]])} раз")
+# print(f"Искомое число встречается {sum([1 for i in range(len(list_1)) if num == list_1[i]])} раз")
