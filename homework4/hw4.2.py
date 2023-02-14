@@ -17,10 +17,10 @@ berries = list([int(input(f"Ягод на {i + 1} кусте: "))
 
 # 1 способ через цикл:
 # max = 0
-# for i in range(1, len(berries) - 1):
-#     if berries[i - 1] + berries[i] + berries[i + 1] > max:
-#         max = berries[i - 1] + berries[i] + berries[i + 1]
+# for i in range(len(berries)):
+    # max = berries[i - 1] + berries[i] + berries[i + 1  if i < (len(berries) - 1) else 0]
+
 # print(max)
 
 # 2 способ Comprehensions: 
-print(max([berries[i - 1] + berries[i] + berries[i + 1] for i in range(1, len(berries) - 1)]))
+print(max([berries[i - 1] + berries[i] + berries[i + 1 if i < (len(berries) - 1) else 0] for i in range(len(berries))]))
