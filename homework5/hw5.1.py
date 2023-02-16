@@ -5,9 +5,9 @@
 def pow(a, b):
     if b == 0:
         return 1
-    elif b == 1:
-        return a
-    return a*pow(a, b - 1)
+    if b < 0:
+        return pow(a, b + 1)*1 / a
+    return pow(a, b - 1)*a
 
     
 A = int(input("Введите число: "))
