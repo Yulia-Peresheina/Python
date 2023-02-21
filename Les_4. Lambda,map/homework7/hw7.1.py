@@ -10,16 +10,12 @@
 vowels = ['ё', 'у', 'е', 'ы', 'а', 'о', 'э', 'я', 'и', 'ю']
 poem = [i for i in input().split()]
 
-# разложила по циклам
-# for i in poem:
-#     count = 0
-#     for j in range(len(i)):
-#         if i[j] in vowels:
-#             count += 1
-#     print(count, i)
+
     
 # решение с comprehensions
-if len(set([sum([1 for j in range(len(i)) if i[j] in vowels]) for i in poem])) == 1:
+rithm = [sum([1 for j in range(len(i)) if i[j] in vowels]) for i in poem]
+
+if len(set(rithm)) == 1 and all(rithm):
     print("Парам пам-пам")
 else:
     print("Пам парам")

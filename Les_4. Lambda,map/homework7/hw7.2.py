@@ -11,7 +11,8 @@
 def print_operation_table(operation, num_rows=6, num_columns=6):
     for i in range(1, num_rows + 1):
         for j in range(1, num_columns + 1):
-            print("{:4d}".format(operation(i, j)), end="")
+            # print("{:4d}".format(operation(i, j)), end="")               аналогично ниженаписанному
+            print(f"{operation(i,j):4}", end='')
         print('')
             
 print_operation_table(lambda x, y: x * y) 
